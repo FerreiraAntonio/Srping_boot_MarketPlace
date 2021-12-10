@@ -1,6 +1,6 @@
 
 
-## Submitting your solution
+
 
 Please push your changes to the `main branch` of this repository. You can push one or more commits. <br>
 
