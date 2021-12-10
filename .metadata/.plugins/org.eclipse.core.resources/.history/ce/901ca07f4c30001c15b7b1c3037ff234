@@ -1,0 +1,27 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(toCamelCase("RWUBWUBWUBLWUB"));
+		
+	}
+	static  String toCamelCase(String s){
+		  
+
+	    return Pattern.compile("WUBWUB").matcher(s).replaceAll("");// + Pattern.compile("WUB").matcher(s).replaceAll(" ") ;
+	   // Matcher matcher 
+	
+}	}

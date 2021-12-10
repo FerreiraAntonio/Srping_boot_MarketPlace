@@ -1,0 +1,42 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+	
+		
+		Map<String, Integer> compra = new HashMap<>();
+		
+		Tests test1 = new Tests("TV", 33);
+		Tests test2 = new Tests("geladeira", 56);
+		Tests test3 = new Tests("som", 89);
+		
+		List<Tests> list = Arrays.asList(test1, test2, test3);
+		
+	Stream<Tests> t = list.stream().filter(c -> c.getValor() > 49 );
+	
+	
+		t.forEach(c -> System.out.println(c));
+	}
+	}
+
+

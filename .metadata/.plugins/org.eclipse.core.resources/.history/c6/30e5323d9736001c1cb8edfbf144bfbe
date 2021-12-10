@@ -1,0 +1,54 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+
+	System.out.println(race(720, 850, 70));
+	}	
+	
+	
+	 public static int[] race(int v1, int v2, int g) {
+	/*	 DecimalFormat format = new DecimalFormat();
+		 format.setMaximumFractionDigits(2);
+		 format.setMinimumFractionDigits(1);*/
+	    
+		double velociademediaCoelho1 = (double)v1/60;
+		double velociademediaCoelho2  =(double) v2/60;
+		double distancia = g;
+		double coelho1=distancia;;
+		double coelho2=0;
+		double falta=0;
+		while(distancia != 0) {
+			
+			coelho1 = distancia;
+			coelho2	=	coelho1- coelho2;
+			falta = distancia / velociademediaCoelho2;
+			distancia = falta * velociademediaCoelho1;
+			
+			System.out.println(falta);
+		}
+		
+		System.out.println("final "+falta);
+		
+//		 System.out.println(velociademediaCoelho1+"   "+velociademediaCoelho2);
+		 
+		 return null;
+	    }
+	}

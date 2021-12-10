@@ -1,0 +1,35 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(toCamelCase("the-stealth-warrior"));
+		
+	}
+	 static String toCamelCase(String s){
+		    
+		 
+		 ArrayList<String> a = new ArrayList<>();
+		 
+	
+		String p="";
+		
+		for(String f : s.split("-")) {
+			 a.add(f);
+			 p=f;
+			
+		System.out.println(p.replaceFirst("E", f)) ;
+		  } 
+		return null;}
+	
+}	

@@ -1,0 +1,61 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( stockSummary( new String[]{"ABAR 200", "CDXE 500", "BKWR 250","ANC 500", "BTSQ 890", "DRTY 600"}, new String[]{ "A", "B"}));
+	}
+
+	
+	
+	public static String stockSummary(String[] filme, String[] letra) {
+		//	ArrayList lista = new ArrayList<>();
+			String[] lista=letra;
+			int num=0;
+			int[] h= {0,0,0,0,0,0,0,0,0,00,0,0};
+			for(int i=0;i<letra.length;i++) {
+				for(int j=0;j<filme.length;j++) {
+					
+				if(letra[i].equals(filme[j].substring(0, 1))) {
+				
+			//		System.out.println(letra[i]+"   "+filme[j]);
+					
+					 String g=filme[j];
+				//	lista[i] =letra[i]+Integer.parseInt(g.replaceAll("[^0-9]", ""));
+					
+					 
+							h[i]+=Integer.parseInt(g.replaceAll("[^0-9]", ""));
+				
+				//	System.out.println(h[i]);
+					//
+		
+				}	
+				
+				} lista[i]=letra[i]+":"+h[i];
+				
+			}
+		String end="";
+			for(String f: lista) {
+				end+="("+f+") - ";;
+		//	System.out.println(f);
+			}
+			
+			
+			
+
+	return end.substring(end.length()-1, end.length());	}}

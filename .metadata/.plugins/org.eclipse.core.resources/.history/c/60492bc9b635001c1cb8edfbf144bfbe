@@ -1,0 +1,69 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( stockSummary( new String[]{"ROXANNE 102","RHODODE 123", "BKWRKAA 125", "BTSQZFG 239", "DRTYMKH 060"}, new String[]{
+			"B","R","D","X"}));
+	}
+
+	
+	
+	public static String stockSummary(String[] filme, String[] letra) {
+		//	ArrayList lista = new ArrayList<>();
+      
+      for(String d: filme){
+    //    System.out.println(d);
+        }
+      
+    ;
+			String[] lista=letra;
+			int num=0;
+			int[] h= {0,0,0,0,0,0,0,0,0,00,0,0};
+			for(int i=0;i<letra.length;i++) {
+				for(int j=0;j<filme.length;j++) {
+					
+				if(letra[i].equals(filme[j].substring(0, 1))) {
+				
+				System.out.println(letra[i]+"   "+filme[j]);
+					
+					 String g=filme[j];
+				//	lista[i] =letra[i]+Integer.parseInt(g.replaceAll("[^0-9]", ""));
+					
+					 
+							h[i]+=Integer.parseInt(g.replaceAll("[^0-9]", ""));
+						//	System.out.println(h[i]+" - "+g);
+				
+				//	System.out.println(h[i]);
+					//
+		
+				}	
+				
+				} lista[i]=letra[i]+" : "+h[i];
+				
+			}
+		String end="";
+			for(String f: lista) {
+				end+="("+f+") - ";
+	
+			}
+			
+			
+			
+
+	return end.substring(0, end.length()-1).trim();	}}

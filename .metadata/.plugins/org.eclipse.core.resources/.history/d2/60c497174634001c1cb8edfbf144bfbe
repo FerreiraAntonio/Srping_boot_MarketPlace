@@ -1,0 +1,53 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	private static final Object[] String = null;
+
+
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( stockSummary( new String[]{"ABAR 200", "CDXE 500", "BKWR 250","ANC 500", "BTSQ 890", "DRTY 600"}, new String[]{ "A", "B"}));
+	}
+
+	
+	
+	public static String stockSummary(String[] filme, String[] letra) {
+	//	ArrayList lista = new ArrayList<>();
+		String[] lista=letra;
+		int num=0;
+		for(int i=0;i<letra.length;i++) {
+			for(int j=0;j<filme.length;j++) {
+				
+			if(letra[i].equals(filme[j].substring(0, 1))) {
+			
+				lista[i] =letra[i];
+			//	System.out.println(letra[i]+"   "+filme[j]);
+	
+			}	
+			
+			}}
+	
+		for(int c=0;c<lista.length;c++) {
+		System.out.println(lista);
+		
+		
+		
+		
+
+return null;	}}

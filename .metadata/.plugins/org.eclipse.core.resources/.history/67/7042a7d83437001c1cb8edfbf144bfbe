@@ -1,0 +1,45 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+		//
+		//80, 91, 37
+for(int n :race(720, 850, 70 )) {
+	System.out.println(n);
+	}	
+	
+	}
+	 public static int[] race(int v1, int v2, int g) {
+	
+		 int totalSecondsTaken = 0;
+	      if (v2 > v1 ) {
+	        totalSecondsTaken = (g*3600) / (v2-v1) ;
+	        System.out.println(totalSecondsTaken);
+	      } else {
+	        return null;
+	      }
+	      
+	      
+	      return new int[] {totalSecondsTaken/3600, (totalSecondsTaken % 3600)/60, totalSecondsTaken % 60};
+
+	    }
+	}

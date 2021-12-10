@@ -1,0 +1,55 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( sumDigPow(1, 89));
+	}
+	
+	
+	
+	public static List<Long> sumDigPow(long a, long b) {
+       
+		ArrayList<Long> q =new  ArrayList<>();
+		List<Long> w =new  ArrayList<>();
+	
+		
+		if(a==1  ) {
+			for(String i : "123456789".split("")) {
+				q.add(Long.parseLong(i));
+			}
+		}
+		
+			String[] o=String.valueOf(b).split("");
+	int num=1;
+	for(int i=0; i<o.length; i++) {		
+		int h=0;
+		
+		h =Integer.parseInt((o[i]));
+		h+=(int) Math.pow(h,num);
+		System.out.println(h+" "+num+"<-");
+		num=num+1;
+		
+		if(h == b) {
+			System.out.println(h+" "+b+"<-");
+		}
+	}
+		
+		return null;
+    }
+}

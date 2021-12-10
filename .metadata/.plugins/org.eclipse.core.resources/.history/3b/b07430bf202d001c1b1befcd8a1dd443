@@ -1,0 +1,33 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(GetSum( 4));
+		
+	}
+   static	int d=0;
+   static	int g=1;
+	public static int GetSum( int x) {
+		
+	//	if(a != b) { return a+b;}
+	//	else{ return a;}
+		//int d= x;
+		//System.out.println(d);
+		for(int i =1; i<=x; i++) {
+			g=x;
+			g=g*i;
+			
+		System.out.println(g+" * "+i+"   x"+x);
+		}
+ return 01111  ;} 
+
+}

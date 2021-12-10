@@ -1,0 +1,100 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+	
+		
+		
+		System.out.println(parseInt("two hundred forty-six"));
+		
+	}
+	
+		public static int parseInt(String num) {
+
+				ArrayList ty = new ArrayList<>();
+				ArrayList hundred = new ArrayList<>();
+				ArrayList thousand = new ArrayList<>();
+				ArrayList million = new ArrayList<>();
+				
+				String x="";
+				if(num.contains("hundred")) {
+					for(int i=0; i< 4;i++) {
+						x=String.valueOf(num.charAt(i));
+						System.out.println(x);
+					}
+					
+				}
+				if(num.contains("thousand")) {
+					for(int i=0; i< 6;i++) {
+						x=Num(String.valueOf(num.charAt(i)));
+					}
+					
+					
+				}
+				if(num.contains("million")) {
+					for(int i=0; i< 7;i++) {
+						x=Num(String.valueOf(num.charAt(i)));
+					}
+					
+					
+				}
+				
+								
+				
+			
+	        return Integer.parseInt(x);
+	    }
+		
+		
+		public static  String Num(String num) {
+			
+		String r ="0";
+			if(num.equals("one")) {
+				r="1";
+			}
+			if(num.equals("two")) {
+				System.out.println("entrou");
+				r="2";
+			}
+			if(num.equals("three")) {
+				r="3";
+			}
+			if(num.equals("four")) {
+				r="4";
+			}
+			if(num.equals("five")) {
+				r="5";
+			}
+			if(num.equals("six")) {
+				r="6";
+			}
+			if(num.equals("seven")) {
+				r="7";
+			}
+			if(num.equals("eigth")) {
+				r="8";
+			}
+			if(num.equals("nine")) {
+				r="9";
+			}			
+			return r;
+		}
+	}

@@ -1,0 +1,32 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(printerError("wdwcwdxsc"));
+		
+	}
+   
+	 public static String printerError(String s) {	
+		 List lista = new ArrayList<>();
+		 int num=0;
+		 for (char c = 'a'; c <= 'm'; c++) {
+		
+			lista.add(c);			
+			System.out.println(lista);
+			}
+			for(String f : s.split("")) {System.out.println(lista.contains(f));
+			if(lista.contains(f)) { num++;};
+			}
+			String d= String.valueOf(num);
+		        return d;
+		    }}

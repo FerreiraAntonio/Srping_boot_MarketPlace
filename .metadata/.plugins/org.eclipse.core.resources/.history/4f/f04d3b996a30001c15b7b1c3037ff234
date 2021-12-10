@@ -1,0 +1,49 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(SongDecoder("WUBWUBIWUBAMWUBWUBX"));
+		
+	}
+	static  String SongDecoder(String s){
+	//	while(s.contains("WUB")) {
+	
+		ArrayList<String> l = new ArrayList<>();	
+	//	l.add(s.split("WUB"));
+	//	System.out.println(l);
+		if(s.contains("WUB")) { s=s.replace("WUB", "  ");}
+		
+	if(s.contains("  ")) { s=s.replace("  ", " ");}
+		//System.out.println(s);
+		//int num=0;
+	//for(String q: s.split(" ")) {
+	
+	//	l.add(q);	
+	
+	//	if(l.size()>1 && l.get(0).equals("")) {l.remove(0); System.out.println("cai");}
+	//	num++;
+	System.out.println("["+s.substring(0,1)+"]");
+		if(s.substring(0,1)==" ") {s.replace(" ", "");}
+	//	}	
+	
+
+	
+//	int num=0;
+//	for(String a : l) {System.out.println("indice: "+num+"= "+"["+a+"]");
+//	num++;}
+	
+
+	return s;}}

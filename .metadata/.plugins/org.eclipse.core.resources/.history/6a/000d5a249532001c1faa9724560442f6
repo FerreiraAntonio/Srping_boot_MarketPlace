@@ -1,0 +1,41 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( sumDigPow("Microbio"));
+	}
+	
+	
+	
+	public static String sumDigPow(String b) {
+       
+		String[] d=b.split("");
+		
+ // for(int i=0;i<b.length(); i++) { 
+	  for(int j=b.length()-1;j>=0; j--) {
+		  
+		b+=d[j];
+		  
+	  }
+	//  }
+	//  for(String s: d) {System.out.println(s);
+
+		
+	return b;
+		}}

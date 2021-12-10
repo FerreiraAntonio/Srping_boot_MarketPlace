@@ -1,0 +1,163 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+	
+		
+		
+		System.out.println(parseInt("four hundred thousand and thirty"));
+		
+	}
+	
+		public static String parseInt(String num) {
+
+				
+				ArrayList<String> hundred = new ArrayList<>();
+				ArrayList<String> numbers = new ArrayList<>();
+				String a ="ten twenty thirty fourty fifty sixty seventy eighty ninety";
+				String z="";
+				
+				String x="";
+				String c="";
+				 num= num.replace("-", " ");
+			num= num.replace(" and ", " ");
+		
+			String q="";
+			
+			
+	//------------------------------thousand---------------------------------------------		
+				if(num.contains("thousand")) {
+					String h="";
+					h=num.substring(0, num.indexOf("thousand"));
+					if(h.contains("hundred")) {
+						
+						q=num.substring(0, num.indexOf("hundred"));					
+						
+						for(String l: q.split(" ")) {
+							x+=NumDezena(l);
+							System.out.println(x.length());
+												}
+						if(x.length()==1 && x.equals(NumCentena(x))) {
+								x+="00";
+								System.out.println("centena"+x);
+							}					
+				}
+					else {
+						x=NumDezena(h.trim());System.out.println("dezena"+x);}						
+				}
+//---------------------------------------------------------------------------------------------		
+		
+			
+			
+			
+			
+			
+			
+	        return x;
+	    }
+		
+		
+		
+		
+		
+			
+		
+	
+		
+		
+		
+		public static  String NumDezena(String num) {
+			
+		String r ="0";
+			if(num.equals("one") || num.equals("ten") ) {
+				r="1";
+			}
+			if(num.equals("two")|| num.equals("twenty")) {
+				System.out.println("entrou 2");
+				r="2";
+			}
+			if(num.equals("three")|| num.equals("thirty")) {
+				r="3";
+			}
+			if(num.equals("four") || num.equals("forty")) {
+				System.out.println("entrou 4");
+				r="4";
+			}
+			if(num.equals("five")|| num.equals("fifty")) {
+				r="5";
+			}
+			if(num.equals("six")|| num.equals("sixty")) {
+				System.out.println("entrou 6");
+				r="6";
+			}
+			if(num.equals("seven")|| num.equals("seventy")) {
+				r="7";
+			}
+			if(num.equals("eigth")|| num.equals("eighty")) {
+				r="8";
+			}
+			if(num.equals("nine")|| num.equals("ninety")) {
+				r="9";
+			}			
+			return r;
+		}
+		
+		
+		
+		
+		
+		public static  String NumCentena(String num) {
+			
+			String r ="";
+				if( num.equals("ten") ) {
+					r="10";
+				}
+				if( num.equals("twenty")) {
+					System.out.println("entrou 2");
+					r="20";
+				}
+				if( num.equals("thirty")) {
+					r="30";
+				}
+				if( num.equals("forty")) {
+					System.out.println("entrou 4");
+					r="40";
+				}
+				if( num.equals("fifty")) {
+					r="50";
+				}
+				if( num.equals("sixty")) {
+					System.out.println("entrou 6");
+					r="60";
+				}
+				if( num.equals("seventy")) {
+					r="70";
+				}
+				if( num.equals("eighty")) {
+					r="80";
+				}
+				if(num.equals("ninety")) {
+					r="90";
+				}			
+				return r;
+			}
+		
+	}

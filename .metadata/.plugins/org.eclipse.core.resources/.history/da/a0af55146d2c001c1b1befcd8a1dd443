@@ -1,0 +1,51 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(validaNumero("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+		System.out.println();
+	}
+	
+	public static String  validaNumero(String str) {
+		ArrayList<Integer> d= new ArrayList<>() ;  
+		String g;
+	
+		String string = str.replace(" ",",");
+		System.out.println(string);
+		
+		 int[] arr = Arrays.stream(string.substring(1, string.length() - 1).split(",")).map(String::trim).mapToInt(Integer::parseInt).toArray();
+	                
+	        System.out.println(Arrays.toString(arr));
+		
+		/*
+		for(int i=0; i< string.length();i++) {	
+			g=(String.valueOf(string.charAt(i)));			
+			if(g.equals("-")) {				
+				String e= g + String.valueOf(string.charAt(i+1));
+				Integer l = Integer.parseInt(e);
+				System.out.println(l+"rrr");
+				d.add(l);
+				
+				i+=1;				
+			}
+			else {
+		d.add(Integer.parseInt(g));	
+		System.out.println(g);
+			}}
+	   d.sort(null);
+	  String h=String.valueOf(d.get(d.size()-1)+" "+d.get(0));   */
+	
+return null;
+	}
+
+
+}

@@ -1,0 +1,11 @@
+package dev.codescreen.marketplace.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+@RestController
+public class ProductController {
+
+    // TODO: Implement Product APIs here
+}

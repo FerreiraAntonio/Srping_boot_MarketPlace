@@ -1,0 +1,27 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(toCamelCase("the-stealth-warrior"));
+		
+	}
+	 static String toCamelCase(String s){
+		    
+		 
+		 
+	//	String a= s.replace("-", " ");
+		
+		 return s.replace("-", "");
+		  }
+}	

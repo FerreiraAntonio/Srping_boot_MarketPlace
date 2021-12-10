@@ -1,0 +1,35 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(spinWords("Hey fellow warriors"));
+		
+	}
+	 public static String spinWords(String sentence) {
+		 for (String a : sentence.split(" "))
+	       {
+	           if (a.length()> 4)
+	           {
+	              sentence = sentence.replace(a, new  StringBuffer(a).reverse());
+	           }
+	          
+	           
+	       }
+	       return sentence;
+	    //TODO: Code stuff here
+	  }
+	}

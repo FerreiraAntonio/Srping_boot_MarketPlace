@@ -1,0 +1,96 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( stockSummary( new String[]{"ABAR 200", "CDXE 500", "BKWR 250","ANC 500", "BTSQ 890", "DRTY 600"}, new String[]{ "A", "B"}));
+	}
+
+	
+	
+	public static String stockSummary(String[] filme, String[] letra) {
+
+			int num=0;
+			String f="";
+			String p="";
+			ArrayList<String> let = new ArrayList<>();
+			ArrayList<String> end = new ArrayList<>();
+		for(int l=0; l<letra.length;l++) {
+		
+		
+			for(int i=0; i<filme.length;i++) {
+			
+			if(letra[l].equals(filme[i].substring(0,1))) {
+				//System.out.println(letra[i]+"   "+filme[l].substring(0,1));
+				
+			//	System.out.println("filme:"+ filme[i]);
+				
+				for(int j=0 ; j<filme[i].length();j++) {
+					if(Character.isDigit(filme[i].charAt(j))) {
+					
+					f+=filme[i].charAt(j);
+			System.out.println(filme[i]); 
+				
+		}
+					else {f="";  }	
+						//
+					
+				}  
+	let.add(filme[i].substring(0,1)+":"+f);
+
+				}             
+			
+		
+		}
+
+		}	
+		/*
+		int num2=0;
+		int q=0;
+				//System.out.println(s.substring(0,1)+" - "+s.substring(q,q+1));
+		for(int i=0; i<let.size();i++) {
+		//	System.out.println(let.get(i));
+		String v=let.get(i).substring(0,1);	
+
+		for(int j=1+i; j<let.size();j++) {
+			System.out.println(let.get(i)+" - "+(let.get(j))+ "   i:"+i+"   j:"+j);
+		if(let.get(i).substring(0,1).equals(let.get(j).substring(0,1))) {
+		
+			
+			String m=let.get(i);
+			String h=m.replaceAll("[^0-9]", "");
+			//num=Integer.parseInt();
+			
+//System.out.println(let.get(i).substring(0,1)+" - "+(let.get(j).substring(0,1)));	
+		num2++;
+				num+=Integer.parseInt(let.get(i).replaceAll("[^0-9]", ""));
+			end.add(let.get(j).substring(0,1));
+			break;
+		}
+	//	
+	
+	//	}	
+			
+		}
+			q++;}  */
+		
+		System.out.println(let);
+//	System.out.println(let);
+		return null;
+	}
+}

@@ -1,0 +1,46 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(spinWords("Hey fellow warriors"));
+		
+	}
+	 public static String spinWords(String s) {
+		 
+		List l = new ArrayList<>();
+		// l.add((String )s.split(" ").toString());
+		 for(String z: s.split(" ")) {
+			 if(z.length() >4) {
+			//	for(int i=0; i< z.length();i++) {
+				int num=0;	
+				 for(int q=z.length()-1; q>=0;q--) {
+						char m = z.charAt(q);
+					
+						z.replace(z.substring(num,num+1), z.substring(q,q-1));
+						System.out.println(z);
+					}
+					//}
+				
+				  l.add(z);
+				
+			 } 
+		  l.add(z);
+			// System.out.println(l);
+		  }
+		 return null;
+		  }
+		}

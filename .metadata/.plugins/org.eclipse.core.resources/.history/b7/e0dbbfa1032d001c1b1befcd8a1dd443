@@ -1,0 +1,24 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(getXO("zxpzpzpp"));
+		
+	}
+	
+	 public static boolean getXO (String str) {
+		 str = str.toLowerCase();
+		    return str.replace("o","").length() == str.replace("x","").length();    		    
+		  }
+
+
+}

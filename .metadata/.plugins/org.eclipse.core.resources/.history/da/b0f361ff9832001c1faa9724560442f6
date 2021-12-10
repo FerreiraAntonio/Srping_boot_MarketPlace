@@ -1,0 +1,41 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( camelCase("camelCasing"));
+	}
+	
+
+	 public static String camelCase(String a) {
+		   	String b= a.toLowerCase();
+	int num=0;
+		for(String v: a.split("")) {
+			for(String q: b.split("")) {
+				 if(v.equals(q)) {
+					 String g= a.substring(0, num);
+					 
+					 System.out.println(g+"<-"); 
+				 }else {break;}
+			}//System.out.println(num++);
+		}
+		
+	//	 System.out.println(a);
+		 return null;
+		  }
+		}

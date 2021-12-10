@@ -1,0 +1,96 @@
+package dev.codescreen.marketplace.controller;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
+
+import dev.codescreen.marketplace.controller.exception.ResourceNotFoundException;
+import dev.codescreen.marketplace.dto.ProductDto;
+import dev.codescreen.marketplace.dto.StoreDto;
+import dev.codescreen.marketplace.model.Product;
+import dev.codescreen.marketplace.repository.ProductRepository;
+import dev.codescreen.marketplace.repository.StoreRepository;
+import dev.codescreen.marketplace.service.ProductService;
+import dev.codescreen.marketplace.service.StoreService;
+
+@Controller
+@RestController
+@RequestMapping("/product")
+public class ProductController {
+
+    // TODO: Implement Product APIs here
+
+	
+	@Autowired
+	private ProductService productService;
+	
+	
+	private Product product;
+    private StoreService storeService;
+    private StoreDto storeDto;
+    private StoreRepository storeRepository;
+    private ProductRepository productRepository;
+    private StoreController storeController;
+ 
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
+
+    @GetMapping(value = "/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ProductDto getProduct(@PathVariable("id") Long Id) {
+        return productService.getProduct(Id)
+                           .orElseThrow(ResourceNotFoundException::new);
+    }
+    
+    
+    @GetMapping(value = "/store/{storeId}/product")
+    @ResponseStatus(HttpStatus.OK)
+     		 public StoreDto getIdByStore(@PathVariable Long storeId) {
+    	    //   var store = storeService.getStore(storeId);
+    	       return (StoreDto) productService.findProductsByStoreId(storeId); 
+  
+    	   
+        
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductDto createProduct(@RequestBody ProductDto productDto, Long storeId) {
+    	    	
+    	var produto =productService.addProduct(productDto, storeId);
+    	  // 	
+            return  produto;
+            
+    }
+ 
+
+    @GetMapping(value = "/find/{name}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ProductDto > findProductByName(@PathVariable String name) {
+        List<ProductDto> product = productService.findProductsByName(name);
+        if (product == null || product.isEmpty()) {
+            throw new ResourceNotFoundException();
+        }
+        return product;
+    }
+    
+   
+
+}
+

@@ -1,0 +1,20 @@
+package dev.codescreen.marketplace.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+@RestController
+@RequestMapping("/product")
+public class ProductController {
+
+    // TODO: Implement Product APIs here
+	
+	
+	@GetMapping
+	public String helo(){
+		return "ola mundo";
+	};
+}

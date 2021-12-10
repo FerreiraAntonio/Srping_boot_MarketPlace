@@ -1,0 +1,68 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( stockSummary( new String[]{"ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"}, new String[]{ "A", "B"}));
+	}
+
+	
+	
+	public static String stockSummary(String[] filme, String[] letra) {
+
+			int num=0;
+			String f="";
+			ArrayList<String> let = new ArrayList<>();
+		for(String g: filme) {
+			for(int i=0; i<letra.length;i++) {
+			if(g.contains(letra[i])) {				
+			//	let.add(g.substring(0,1));
+			
+				for(Character d: g.toCharArray()) {
+					if(d.isDigit(d)) {
+					//	let.add(g.substring(0,1)+d);
+					//	System.out.println();
+					f+=String.valueOf(d);
+					
+				}else {f="";}					}
+	let.add(g.substring(0,1)+":"+f);
+	break;
+			}
+			
+			 }
+	
+		}
+		int q=0;
+				//System.out.println(s.substring(0,1)+" - "+s.substring(q,q+1));
+		for(int i=0; i<let.size();i++) {
+		//	System.out.println(let.get(i));
+		String v=let.get(i).substring(0,1);	
+		System.out.println(v);
+	//	if(s.substring(0,1).equals(s.substring(q,q+1))) {
+	//	num+=Integer.parseInt(s.replace("A", "[\\d]"));
+			
+	/	}	
+			
+		
+			q++;}
+		
+		
+	System.out.println(let);
+		return null;
+	}
+}

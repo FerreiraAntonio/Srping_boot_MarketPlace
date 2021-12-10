@@ -1,0 +1,41 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( stockSummary( new String[]{"ROXANNE 102","RHODODE 123", "BKWRKAA 125", "BTSQZFG 239", "DRTYMKH 060"}, new String[]{
+			"B","R","D","X"}));
+	}
+
+	//(B : 364) - (R : 225) - (D : 60) - (X : 0)
+	
+	 public static String stockSummary(String[] arts, String[] cats) {
+		    if (arts.length == 0) return "";
+		    final int space = arts[0].indexOf(" ");
+		    return Stream.of(cats)
+		      .map(c -> c + " : " + Stream.of(arts)
+		        .filter(a -> c.contentEquals(a.subSequence(0, 1)))
+		        .map(a -> a.substring(space + 1))
+		        .mapToInt(Integer::parseInt)
+		        .sum())
+		      .map(s -> "(" + s + ")")
+		      .collect(Collectors.joining(" - "));
+		  }
+		}

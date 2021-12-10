@@ -1,0 +1,31 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(Tickets(new int[] {25, 25, 50}));
+		
+	}
+	public static String Tickets(int[] p)
+	  {
+	     
+		List<Integer> l = new ArrayList<>();
+		for(Integer a: p) {
+			l.add(a);
+		}
+System.out.println(l);
+		return null;
+	  }
+	}

@@ -1,0 +1,58 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+		//720, 850, 70
+
+	System.out.println(race(80, 91, 37));
+	}	
+	
+	
+	 public static int[] race(int v1, int v2, int g) {
+	
+		int velociademediaCoelho1 = v1/60;
+		
+		int velociademediaCoelho2  = v2/60;
+		int distanciaFaltante = g;
+		int coelho1=distanciaFaltante;
+		int coelho2=0;
+		int tempo=0;
+		int tempo2=0;
+		while(distanciaFaltante > 0) {
+			
+			coelho1 = distanciaFaltante;
+			coelho2	=	coelho1- coelho2;
+			tempo = distanciaFaltante / velociademediaCoelho2;
+			System.out.println("tempo: "+tempo);
+			distanciaFaltante = tempo * velociademediaCoelho1;
+			System.out.println("distancia q falta: "+distanciaFaltante);
+			tempo2+=tempo;
+			//break;
+		}
+		
+		System.out.println("tempo final "+tempo2);
+		
+//		 System.out.println(velociademediaCoelho1+"   "+velociademediaCoelho2);
+		 
+		 return null;
+	    }
+	}

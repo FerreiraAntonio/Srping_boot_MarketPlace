@@ -1,0 +1,52 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( comp( new int[]{121, 144, 19, 161, 19, 144, 19, 11},new int[]{121, 14641, 20736, 361, 25921, 361, 20736, 361}));
+		
+	}
+	public static boolean comp(int[] a, int[] b) {
+	  
+	    ArrayList<Integer> list = new ArrayList<>();
+	  
+	  
+	 int num=0;
+	 int num2=0;
+	    int h= a.length;
+	  for(Integer s : b) {
+	    	list.add((int) Math.sqrt(s));
+	 
+	    }
+	    
+	    for(int l=0;l<a.length;l++) {
+	    	
+	    	  for(int i=0;i<a.length;i++) {
+	    		  System.out.println(list.get(l)+"  "+a[i]);
+	  	    	
+	    	if(list.get(l).equals(b[i])) {
+	    		
+	     System.out.println(list.get(l)+"  "+b[i]+" <-");
+	    	
+	    	}}num2++;
+	    }	
+	 
+	    
+	     return num==h;
+	  }
+	}

@@ -1,0 +1,109 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+	
+		
+		
+		System.out.println(parseInt("fourty hundred thousand and thirty"));
+		
+	}
+	
+		public static String parseInt(String num) {
+
+				
+				ArrayList<String> hundred = new ArrayList<>();
+				ArrayList<String> numbers = new ArrayList<>();
+				String a ="ten twenty thirty fourty fifty sixty seventy eighty ninety";
+				
+				
+				String x="";
+				String c="";
+				 num= num.replace("-", " ");
+			num= num.replace(" and ", " ");
+			
+			
+				
+		
+			System.out.println(num);
+			
+			
+			
+			
+			
+		//	x=montaNumero(num);
+			
+	        return x;
+	    }
+		
+		
+		
+		
+		public static String montaNumero(String a) {
+			String x="";
+			for(String z : a.split(" ")) {
+				x+=Num(z);
+				System.out.println(x);
+			}
+			
+			
+			
+			return x;}
+	
+		
+		
+		
+		public static  String Num(String num) {
+			
+		String r ="0";
+			if(num.equals("one") || num.equals("ten") ) {
+				r="1";
+			}
+			if(num.equals("two")|| num.equals("twenty")) {
+				System.out.println("entrou 2");
+				r="2";
+			}
+			if(num.equals("three")|| num.equals("thirty")) {
+				r="3";
+			}
+			if(num.equals("four") || num.equals("forty")) {
+				System.out.println("entrou 4");
+				r="4";
+			}
+			if(num.equals("five")|| num.equals("fifty")) {
+				r="5";
+			}
+			if(num.equals("six")|| num.equals("sixty")) {
+				System.out.println("entrou 6");
+				r="6";
+			}
+			if(num.equals("seven")|| num.equals("seventy")) {
+				r="7";
+			}
+			if(num.equals("eigth")|| num.equals("eighty")) {
+				r="8";
+			}
+			if(num.equals("nine")|| num.equals("ninety")) {
+				r="9";
+			}			
+			return r;
+		}
+	}

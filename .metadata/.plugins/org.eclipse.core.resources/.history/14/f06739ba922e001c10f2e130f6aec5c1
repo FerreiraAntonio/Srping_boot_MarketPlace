@@ -1,0 +1,39 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(getCount("is2 Thi1s T4est 3a"));
+		
+	}
+	public static String getCount(String str) {
+	
+		
+		if(str.length() != 0 ) {	
+		String[] f= str.split(" ");
+		int num= f.length;
+	for(int i=1;i<=f.length;i++) {
+		String p= String.valueOf(i);		
+		System.out.println(num);
+		if(f[num].contains(p)) {
+			System.out.println(num + " "+p);
+		} num--;
+	}
+			return null; }
+		else {return "";}
+		
+		
+	    
+	  }
+	
+}

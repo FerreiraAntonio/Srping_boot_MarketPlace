@@ -1,0 +1,45 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(getXO("zpzpzpp"));
+		
+	}
+	
+	 public static boolean getXO (String str) {
+		 boolean result =false;
+		 char o= 'o';
+		 char x= 'x';
+		 int cont_o= 0;
+		 int cont_x=0;
+		String str2 = str.toLowerCase();
+		for(int i=0; i< str2.length(); i++) {
+			if(str2.charAt(i)==o) {
+				cont_o +=1;
+			}
+			if(str2.charAt(i)==x) {
+				cont_x +=1;
+			}
+			
+		}
+		 if(cont_o == cont_x) { result=true;}
+		 if(cont_o == 0 && cont_x==0) { result=true;}
+		 
+		 
+		 
+		 return result;
+		    
+		    		    
+		  }
+
+
+}

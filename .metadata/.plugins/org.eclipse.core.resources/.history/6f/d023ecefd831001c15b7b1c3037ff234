@@ -1,0 +1,44 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println( sumDigPow(14, 89));
+	}
+	
+	
+	
+	public static List<Long> sumDigPow(long a, long b) {
+       
+		ArrayList<Long> q =new  ArrayList<>();
+		List<Long> w =new  ArrayList<>();
+		
+		
+	//	System.out.println(f.length());
+		for(int i=1; i<=a; i++) {
+		
+		for(int h=0; h<=i;h++) {
+			String f=String.valueOf(i);
+			System.out.println(f);
+		}	
+	//	
+		}
+	
+		
+	return null;
+		}}

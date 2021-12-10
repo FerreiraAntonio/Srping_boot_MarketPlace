@@ -1,0 +1,32 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(toCamelCase("Green_Red_Yellow_north_Black_Wall"));
+		
+	}
+	static  String toCamelCase(String s){
+		  
+		String p="";
+		int num=0;
+		for(String f : s.split("[-,_]")) {			
+			if(num>=1 && f.substring(0,1)!=" ") {
+			String x= String.valueOf( f.charAt(0));
+			p+=f.replace(x, x.toUpperCase());
+		  }
+			else{p=f.replace(" ", ""); System.out.println("caiu");}
+			num++;};
+		return p;}
+	
+}	

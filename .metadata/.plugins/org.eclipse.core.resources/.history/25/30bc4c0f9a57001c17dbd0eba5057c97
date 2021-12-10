@@ -1,0 +1,51 @@
+package dev.codescreen.marketplace.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import dev.codescreen.marketplace.model.Product;
+
+@Controller
+@RestController
+@RequestMapping(value="/product")
+public class ProductController {
+	
+
+    // TODO: Implement Product APIs here
+	
+	
+	@GetMapping
+	public String hello(){
+		return "ola mundo";
+	};
+	
+	
+	
+	 public boolean salvar(Product obj) {
+
+	        boolean sucesso = true;
+/*
+	        dados = new ContentValues();
+
+	        dados.put(UsuarioDataModel.getUsuario(), obj.getUsuario());
+	        dados.put(UsuarioDataModel.getEmail(), obj.getEmail());
+	        dados.put(UsuarioDataModel.getLogradouro(), obj.getLogradouro());
+	        dados.put(UsuarioDataModel.getCidade(), obj.getCidade());
+	        dados.put(UsuarioDataModel.getBairro(), obj.getBairro());
+	        dados.put(UsuarioDataModel.getEstado(), obj.getEstado());
+	        dados.put(UsuarioDataModel.getNome(), obj.getNomeBebe());
+	        dados.put(UsuarioDataModel.getSexo(), obj.getSexo());
+	        dados.put(UsuarioDataModel.getIdade(), obj.getIdade());
+	        dados.put(UsuarioDataModel.getPeso(), obj.getPeso());
+	        dados.put(UsuarioDataModel.getSenha(), obj.getSenha());
+	        dados.put(UsuarioDataModel.getAltura(), obj.getAltura());
+
+
+	        sucesso = insert(UsuarioDataModel.getTABELA(), dados);
+
+	        return sucesso;*/
+	    }
+	
+}

@@ -1,0 +1,207 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.regex.*;
+
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+	
+		
+		
+		System.out.println(parseInt("four hundred fifty-six thousand and thirty"));
+		
+	}
+	
+		public static String parseInt(String num) {
+
+				
+				ArrayList<String> hundred = new ArrayList<>();
+				ArrayList<String> numbers = new ArrayList<>();
+				String a ="ten twenty thirty fourty fifty sixty seventy eighty ninety";
+				String z="";
+				
+				String x="";
+				String c="";
+				 num= num.replace("-", " ");
+			num= num.replace(" and ", " ");
+		
+			String q="";
+			
+			
+	//------------------------------million---------------------------------------------		
+				if(num.contains("million")) {
+					//String h="";
+				
+					q=num.substring(0, num.indexOf("million"));
+					if(q.contains("hundred")) {
+							
+						q=num.substring(0, num.indexOf("hundred"));	
+						
+				System.out.println("million: "+q);
+				
+				}
+					
+				}
+				
+ //-----------------------------thousand------------------------------------------				
+				
+				if(num.contains("thousand")) {
+					//String h="";
+					int o= 0;
+					q=num.substring(0, num.indexOf("thousand"));
+					
+					for(String d: q.split(" ")) {
+						o++;
+					}
+					System.out.println(o);
+					
+					if(o==4) {
+					if(q.contains("hundred")) {
+						String num2="";	
+						q=NumUnidade( num.substring(0, num.indexOf("hundred")).trim());	
+						num2= num.substring(0, num.indexOf("hundred")).trim();						
+						System.out.println( num2);
+						String h="";
+						//h=num2.substring(num2.indexOf("hundred"), num2.indexOf("thousand")).trim();
+						num2=num2.replace("hundred", "");
+						
+						//q =NumDezena( num.substring(num.indexOf("hundred"), num.indexOf("thousand")).trim());
+				System.out.println("hundred thousand: "+q);
+				
+				}
+					else {
+						
+						q=NumUnidade(q.trim());
+						System.out.println("unidade thousand: "+q);}
+						
+					
+				}}
+//-------------------------------hundred--------------------------------------------------------------		
+				
+			
+						
+			//	System.out.println("dezena: "+q);
+				
+			
+			
+//------------------------------------dezena------------------------------------------------------------			
+			
+				
+			//	System.out.println("unidade: "+q);
+			
+
+				
+				
+//------------------------------------unidade------------------------------------------------------------			
+				
+				
+				//	System.out.println("unidade: "+q);
+				
+								
+				
+			
+	        return x;
+	    }
+		
+		
+		
+		
+		
+			
+		
+	
+		
+		
+		
+		public static  String NumUnidade(String num) {
+			
+		String r ="";
+			if(num.equals("one")  ) {
+				r="1";
+			}
+			if(num.equals("two")) {
+				System.out.println("entrou 2");
+				r="2";
+			}
+			if(num.equals("three")) {
+				r="3";
+			}
+			if(num.equals("four")) {
+				System.out.println("entrou 4");
+				r="4";
+			}
+			if(num.equals("five")) {
+				r="5";
+			}
+			if(num.equals("six")) {
+				System.out.println("entrou 6");
+				r="6";
+			}
+			if(num.equals("seven")) {
+				r="7";
+			}
+			if(num.equals("eigth")) {
+				r="8";
+			}
+			if(num.equals("nine")) {
+				r="9";
+			}			
+			return r;
+		}
+		
+		
+		
+		
+		
+		public static  String NumDezena(String num) {
+			
+			String r ="0";
+				if( num.equals("ten") ) {
+					r="10";
+				}
+				if( num.equals("twenty")) {
+					System.out.println("entrou 2");
+					r="20";
+				}
+				if( num.equals("thirty")) {
+					r="30";
+				}
+				if( num.equals("forty")) {
+					System.out.println("entrou 4");
+					r="40";
+				}
+				if( num.equals("fifty")) {
+					r="50";
+				}
+				if( num.equals("sixty")) {
+					System.out.println("entrou 6");
+					r="60";
+				}
+				if( num.equals("seventy")) {
+					r="70";
+				}
+				if( num.equals("eighty")) {
+					r="80";
+				}
+				if(num.equals("ninety")) {
+					r="90";
+				}			
+				return r;
+			}
+		
+	}

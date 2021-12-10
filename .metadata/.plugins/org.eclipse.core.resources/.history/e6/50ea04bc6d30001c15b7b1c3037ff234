@@ -1,0 +1,34 @@
+package pacoteTeste;
+
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+import javax.management.ObjectInstance;
+
+public class Testando {
+
+	public static void main(String[] args) {
+		
+	
+	System.out.println(SongDecoder("WUBWUBABCWUB"));
+		
+	}
+	static  String SongDecoder(String s){
+	
+	
+		ArrayList<String> l = new ArrayList<>();	
+	
+		if(s.contains("WUB")) { s=s.replace("WUB", "  ");}
+		
+	if(s.contains("  ")) { s=s.replace("  ", " ");}
+
+	String f= " ";
+	while(s.substring(0,1).trim().isEmpty())
+		 {s= s.substring(1);}
+
+	return s;}}
